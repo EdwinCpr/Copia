@@ -1,0 +1,210 @@
+   /*Root*/
+   :root{
+    /*primarios*/
+--color-primario: #502050;
+--color-secundario: #ee68a4;
+--dark-rayish-magenta: #937b92;
+--light-grayish-magenta: #f7f2f7;
+--blanco: #ffffff;
+}
+
+/*Global*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 0.9rem;
+}
+
+p{
+    font-size: 0.875rem;
+}
+
+/*Media queries font*/
+@media(min-width: 786px){
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
+
+/*Body*/
+body{            
+    background-image: url("https://raw.githubusercontent.com/Pazispeace/FrontendMentor-Challenges/98e3d1b1f981a687cd68f920a84ef511fe07d1cc/social-proof-section-master/images/bg-pattern-top-mobile.svg"), url("https://raw.githubusercontent.com/Pazispeace/FrontendMentor-Challenges/98e3d1b1f981a687cd68f920a84ef511fe07d1cc/social-proof-section-master/images/bg-pattern-bottom-mobile.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+}
+
+/*Media queries body*/
+@media(min-width: 786px){
+    body{
+        background-image: url("https://raw.githubusercontent.com/Pazispeace/FrontendMentor-Challenges/98e3d1b1f981a687cd68f920a84ef511fe07d1cc/social-proof-section-master/images/bg-pattern-top-desktop.svg"), url("https://raw.githubusercontent.com/Pazispeace/FrontendMentor-Challenges/98e3d1b1f981a687cd68f920a84ef511fe07d1cc/social-proof-section-master/images/bg-pattern-bottom-desktop.svg");
+        background-position: top left, bottom right;
+        background-size: auto, 60%;
+        background-repeat: no-repeat;
+    }
+}
+/*Contenedor*/
+.contenedor{
+    width: 80%;
+    margin: auto;            
+
+}
+
+
+/*Main*/
+main{
+    margin-top: 60px;
+
+}
+
+/*Principal izquierda*/
+.principal-izquierda{
+    text-align: center;
+}
+
+.izquierda-titulo{
+    color: var(--color-primario);
+}
+
+.izquierda-descripcion{
+    margin-top: 20px;
+    color: var(--dark-rayish-magenta);
+}
+
+
+/*Principal derecha*/
+.principal-derecha{
+    margin: 20px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.derecha-uno, .derecha-dos, .derecha-tres{
+    padding: 20px;
+    background-color: var(--light-grayish-magenta);
+    color: var(--color-primario);
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.derecha-uno img, .derecha-dos img, .derecha-tres img{
+    height: 15px;
+}
+
+/*Media queries derecha e izquierda*/
+@media(min-width: 786px){
+    .principal-flexbox{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 220px;
+    }
+
+    .derecha-uno, .derecha-dos, .derecha-tres{
+        display: flex;
+        align-items: center;
+        height: 10px;
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    .derecha-uno{
+        position: relative;
+        left: -60px;
+    }
+
+    .derecha-dos{
+        position: relative;
+        left: -35px;
+    }
+
+    .uno-estrellas, .dos-estrellas, .tres-estrellas{
+        padding: 30px;
+    }
+
+    .principal-izquierda{
+        text-align: unset;
+    }
+    
+}
+
+/*Card*/
+section{
+    margin-top: 60px;
+}
+
+.card img{
+    height: 40px;
+    border-radius: 20px;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 15px;
+}
+
+.card-uno, .card-dos, .card-tres{
+    background-color: var(--color-primario);
+    color: var(--blanco);
+    border-radius: 10px;
+}
+
+.flex{
+    display: flex;
+}
+
+.contenido-card{
+    margin: 30px;
+}
+
+.nombre{
+    padding-left: 20px;
+}
+
+.nombre p{
+    padding: 2px;
+} 
+
+.mensaje{
+    padding-top: 10px;
+    line-height: 23px;
+}
+
+.estado{
+    color: var(--color-secundario);
+}
+
+/*Media queries card*/
+@media(min-width: 786px){
+    .card-grid{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+    }
+
+    .card-dos{
+        position: relative;
+        top: 20px;
+    }
+
+    .card-tres{
+        position: relative;
+        top: 40px;
+    }
+}
